@@ -1,0 +1,24 @@
+package model.interfaces;
+
+import view.interfaces.Geometry;
+
+import java.util.ArrayList;
+
+public interface InterfaceofShapes {
+    void addingshape(Geometry shape);
+    void removingshape(Geometry shape);
+    ArrayList<Geometry>get_Geometry();
+    void notification(InterfaceofObserver paintCanvas);
+    void deletenotification(InterfaceofObserver paintCanvas);
+    void Notify();
+    void addinglist(Geometry shapes);
+    ArrayList<Geometry> get_shapes();
+    void removinglist();
+    void clearing();
+    void addingtoboard(Geometry shapes);
+    void removingfromboard();
+    void clearingboard();
+    ArrayList<Geometry>get_boardshapes();
+
+
+}
