@@ -31,6 +31,7 @@ public enum EventName {
 			return "CHOOSE MOUSE MODE";
 		}
 	},
+
 	UNDO,
 	REDO,
 	COPY,
