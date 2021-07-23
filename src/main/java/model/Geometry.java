@@ -8,13 +8,13 @@ import java.util.ArrayList;
 public class Geometry implements InterfaceofShapes {
     private final ArrayList<view.interfaces.Geometry> ListofShapes;
     private final ArrayList<InterfaceofObserver> observers;
-    private final ArrayList<view.interfaces.Geometry> shapes;
+    private final ArrayList<view.interfaces.Geometry> shapesselected;
     private final ArrayList<view.interfaces.Geometry> board;
 
     public Geometry() {
         ListofShapes = new ArrayList<view.interfaces.Geometry>();
         observers = new ArrayList<InterfaceofObserver>();
-        shapes = new ArrayList<view.interfaces.Geometry>();
+        shapesselected = new ArrayList<view.interfaces.Geometry>();
         board = new ArrayList<view.interfaces.Geometry>();
     }
 
@@ -28,7 +28,7 @@ public class Geometry implements InterfaceofShapes {
         Notify();
     }
 
-    public ArrayList<view.interfaces.Geometry> get_Geometry() {
+    public ArrayList<view.interfaces.Geometry> get_ListOfShapes() {
         return ListofShapes;
     }
 
@@ -49,42 +49,42 @@ public class Geometry implements InterfaceofShapes {
         }
     }
 
-    public void addinglist(view.interfaces.Geometry shapes) {
-        ListofShapes.add(shapes);
+    public void addinglist(view.interfaces.Geometry shapes)
+    {
+        shapesselected.add(shapes);
     }
-
-    @Override
-    public ArrayList<view.interfaces.Geometry> get_shapes() {
-        return null;
-    }
-
     public void removinglist() {
-        ListofShapes.removeAll(ListofShapes);
+        shapesselected.removeAll(shapesselected);
         Notify();
     }
-
-    public void clearing() {
-        ListofShapes.clear();
+    public void clearing()
+    {
+        shapesselected.clear();
     }
 
-    public ArrayList<view.interfaces.Geometry> get_ListofShapes() {
-        return ListofShapes;
+    public ArrayList<view.interfaces.Geometry> getShapesSelected()
+    {
+        return shapesselected;
     }
 
-    public void addingtoboard(view.interfaces.Geometry shapes) {
+    public void addingtoboard(view.interfaces.Geometry shapes)
+    {
         board.add(shapes);
     }
 
-    public void removingfromboard() {
-        board.removeAll(ListofShapes);
+    public void removingfromboard()
+    {
+        board.removeAll(shapesselected);
         Notify();
     }
 
-    public void clearingboard() {
+    public void clearingboard()
+    {
         board.clear();
     }
 
-    public ArrayList<view.interfaces.Geometry> get_boardshapes() {
+    public ArrayList<view.interfaces.Geometry> get_boardshapes()
+    {
         return board;
     }
 }
