@@ -7,12 +7,12 @@ import java.util.ArrayList;
 public interface InterfaceofShapes {
     void addingshape(Geometry shape);
     void removingshape(Geometry shape);
-    ArrayList<Geometry>get_Geometry();
+    ArrayList<Geometry> get_ListOfShapes();
     void notification(InterfaceofObserver paintCanvas);
     void deletenotification(InterfaceofObserver paintCanvas);
     void Notify();
     void addinglist(Geometry shapes);
-    ArrayList<Geometry> get_shapes();
+    ArrayList<Geometry> getShapesSelected();
     void removinglist();
     void clearing();
     void addingtoboard(Geometry shapes);
