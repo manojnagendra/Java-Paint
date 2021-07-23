@@ -7,12 +7,11 @@ import model.GeometryConfig;
 import model.persistence.ApplicationState;
 import view.gui.Gui;
 import view.gui.GuiWindow;
-import view.gui.MousePaint;
+import view.gui.mouse.MousePaint;
 import view.gui.PaintCanvas;
 import view.interfaces.IGuiWindow;
 import view.interfaces.IUiModule;
 
-import javax.swing.*;
 import java.awt.*;
 
 public class Main{
@@ -31,11 +30,5 @@ public class Main{
         mousePaint.execute();
         controller.setup();
 
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 }
-
