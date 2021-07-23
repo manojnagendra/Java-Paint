@@ -1,9 +1,11 @@
 package model;
 
-import view.gui.Rectangle;
+import view.gui.shapes.Ellipse;
+import view.gui.shapes.Rectangle;
+import view.gui.shapes.Triangle;
 import view.interfaces.Geometry;
 
-public class FactoryPattern {
+public class Factory {
     private Object GeometryConfig;
 
     public static Geometry shapecreation(GeometryConfig geometryConfig)
@@ -13,6 +15,16 @@ public class FactoryPattern {
         if(shapeType.equals(ShapeType.RECTANGLE)) {
             System.out.println("Success! You have drawn a rectangle");
             objectshape = new Rectangle(geometryConfig);
+        }
+        else if(shapeType.equals(ShapeType.ELLIPSE))
+        {
+            System.out.println("Success! You have drawn an ellipse");
+            objectshape = new Ellipse(geometryConfig);
+        }
+        else if(shapeType.equals(ShapeType.TRIANGLE))
+        {
+            System.out.println("Success! You have drawn a triangle");
+            objectshape = new Triangle(geometryConfig);
         }
         return objectshape;
     }
