@@ -24,6 +24,11 @@ public class DeleteTheShapes implements UndoRedo, UndoRedoInterface {
 
     public void execute() {
         ShapesSelection = geometry.getShapesSelected();
+        if(ShapesSelection.isEmpty())
+        {
+            System.out.println("There are no shapes that are selected in the canvas");
+        }
+        CommandHistory.add(this);
         for (Geometry shape : ShapesSelection) {
             geometry.removingshape(shape);
             geometry.Notify();
